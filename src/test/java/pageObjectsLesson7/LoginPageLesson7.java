@@ -50,9 +50,10 @@ public class LoginPageLesson7 {
         }
 
         // 7)
-        public void loginToApp (String username, String password){
+        public MainPage loginToApp (String username, String password) {
 
-//    public MainPage loginToApp(String username, String password){
+        //18)
+    public MainPage loginToApp(String username, String password){
 
             // 8)
             //---------------------------------
@@ -69,19 +70,30 @@ public class LoginPageLesson7 {
             // 11) вот эти гетеро использую внутри класса снаружи класса использовать не собираюсь.
             //давай-ка я сделаю them private
 
-
-//        return new MainPage(driver);  // она вернет объект класса mind page
-//    }
-//    public void open(){
-//        driver.get("https://bbb.testpro.io");
-//    }
-//    // NEGATIVE TEST
-//    public boolean isError(){
-//        By errorBy = By.className("error");
-//        try {
-//            wait.until(ExpectedConditions.visibilityOfElementLocated(errorBy));
-//            return true;
-//        } catch (TimeoutException err){
-//            return false;
+        //19)
+        return new MainPage(driver);  // она вернет объект класса mind page
+    }
+            // 16)
+            public void open () {
+                driver.get("https://bbb.testpro.io");
+            }
+            // NEGATIVE TEST
+            public boolean isError () {
+                By errorBy = By.className("error");
+                try {
+                    wait.until(ExpectedConditions.visibilityOfElementLocated(errorBy));
+                    return true;
+                } catch (TimeoutException err) {
+                    return false;
+                }
+            }
         }
+
+    public void open() {
+    }
+
+    public MainPage loginToAppLesson7(String s, String te$t$tudent) {
+    }
+
+    public boolean isError() {
     }
