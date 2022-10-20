@@ -37,7 +37,7 @@ public class LoginToAppLesson7 {
     // all selemium lives in pageobjects
 
     //17)
-    ///////// POSITIVE TEST
+    ///////// POSITIVE TEST//
     @Test
     //тест состоит из 3 частей(здесь мы используем снейк кейс:
     //1. loginToApp. (название тестова класса)
