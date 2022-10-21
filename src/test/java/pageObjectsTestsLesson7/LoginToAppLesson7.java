@@ -56,12 +56,12 @@ public class LoginToAppLesson7 {
         Assert.assertTrue(mainPage.isMain()); //то есть mainPage вернет boolean
     }
 
-    ///////// NEGATIVE TEST
+    ///////// 26) NEGATIVE TEST
     @Test
     public void loginToApp_incorrectCredentials_failedLogin(){
         LoginPageLesson7 loginPage = new LoginPageLesson7(driver);
         loginPage.open();
-        loginPage.loginToApp("koeluser06@testpro.io", "wrongPassword");
+        loginPage.loginToApp("alexander.v.anderson@gmail.com", "wrongPassword");
         Assert.assertTrue(loginPage.isError());
     }
 }
