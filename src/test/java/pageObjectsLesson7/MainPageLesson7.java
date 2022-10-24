@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 //каждая страница это класс.
 //к каждой страницы мы создаем отдельно класс.
 // локаторы это getters.
@@ -29,16 +31,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 //подтверждаем что мы находимся на странице это какая-то boolean функция.
 
-public class MainPage {
+public class MainPageLesson7 {
     //20)
     private WebDriver driver;
     private Wait<WebDriver> wait;
 
     //21)
-    public MainPage(WebDriver driver) {
+    public MainPageLesson7(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, 10, 200);
-
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10, 1));
     }
     //я жду пока элемент homeby будет показан.
 // если он подсветился, значит я на моей странице - я возвращаю true.
@@ -54,7 +55,7 @@ public class MainPage {
             return false;
         }
     }
-    // 27) homework
+    // 27) homework////////////////////
     public String createPlaylist(String playlistName){  // 30) add String
         String playlistId = null;
 

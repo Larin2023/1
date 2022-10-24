@@ -6,10 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pageObjects.LoginPage;
-import pageObjects.MainPage;
 import pageObjectsLesson7.LoginPageLesson7;
-import pageObjectsLesson7.MainPage;
+import pageObjectsLesson7.MainPageLesson7;
 
 public class LoginToAppLesson7 {
     // 15)
@@ -17,7 +15,7 @@ public class LoginToAppLesson7 {
     //18)
     @BeforeMethod
     public void starUp() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
     }
     @AfterMethod
@@ -43,25 +41,25 @@ public class LoginToAppLesson7 {
     //1. loginToApp. (название тестова класса)
     //2. correctCredentials (что я использую)
     //3. successfulLogin (expected result)
-    public void loginToApp_correctCredentials_successfulLogin(){
+    public void loginToAppLesson7_correctCredentials_successfulLogin(){
         LoginPageLesson7 loginPageLesson7 = new LoginPageLesson7(driver);
         loginPageLesson7.open(); //это нам должно открыть страницу
         // я должен послать username и password
 
         //22)
-        MainPage mainPage = loginPageLesson7.loginToAppLesson7("alexander.v.anderson@gmail.com", "te$t$tudent");
+        MainPageLesson7 mainPageLesson7 = loginPageLesson7.loginToAppLesson7("alexander.v.anderson@gmail.com", "te$t$tudent");
         //мне надо доказать что это main page
 
         //23)
-        Assert.assertTrue(mainPage.isMain()); //то есть mainPage вернет boolean
+        Assert.assertTrue(mainPageLesson7.isMain()); //то есть mainPage вернет boolean
     }
 
-    ///////// 26) NEGATIVE TEST
+    ///////// 26) NEGATIVE TEST/////////////////
     @Test
-    public void loginToApp_incorrectCredentials_failedLogin(){
-        LoginPageLesson7 loginPage = new LoginPageLesson7(driver);
-        loginPage.open();
-        loginPage.loginToApp("alexander.v.anderson@gmail.com", "wrongPassword");
-        Assert.assertTrue(loginPage.isError());
+    public void loginToAppLesson7_incorrectCredentials_failedLogin(){
+        LoginPageLesson7 loginPageLesson7 = new LoginPageLesson7(driver);
+        loginPageLesson7.open();
+        loginPageLesson7.loginToAppLesson7("alexander.v.anderson@gmail.com", "wrongPassword");
+        Assert.assertTrue(loginPageLesson7.isError());
     }
 }
