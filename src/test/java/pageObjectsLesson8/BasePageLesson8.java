@@ -8,12 +8,15 @@ import java.time.Duration;
 
 public class BasePageLesson8 {
 
-    // давайте зарефакторим на код. для этого создаем BasePage. и засунем туда наши вейтеры и наши драйверы.
+    // 20) давайте зарефакторим на код. для этого создаем BasePage. и засунем туда наши вейтеры и наши драйверы.
+    // We will make them protected чтобы были видны везде.
     protected WebDriver driver;
     protected Wait<WebDriver> wait;
 
+    // 23) теперь я хочу создать конструктор
     public BasePageLesson8(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(5, 1));
     }
 }
+

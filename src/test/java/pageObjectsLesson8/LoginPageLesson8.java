@@ -9,13 +9,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LoginPageLesson8 {
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class LoginPageLesson8 extends BasePageLesson8{ //25)
+
+//    private WebDriver driver;
+//    private WebDriverWait wait;
 
     public LoginPageLesson8 (WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5, 1));
+//        this.driver = driver;
+//        wait = new WebDriverWait(driver, Duration.ofSeconds(5, 1));
+        // 26)
+        super(driver);
     }
     private WebElement getEmailField(){
         By emailBy = By.xpath("//*[@type='email']");

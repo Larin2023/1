@@ -5,17 +5,25 @@ package pageObjectsLesson8;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+// import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+//import java.time.Duration;
 
-public class MainPageLesson8 {
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class MainPageLesson8 extends BasePageLesson8{ //22) mainPage будет extended basePage
+
+    // 21) засунем in BasePage. наши вейтеры и наши драйверы
+//    private WebDriver driver;
+//    private WebDriverWait wait;
+
     public MainPageLesson8(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5, 1));
-    }
+//        this.driver = driver;
+//        wait = new WebDriverWait(driver, Duration.ofSeconds(5, 1));
+
+        super(driver);
+    }      //24) конструктор родительского класса "super(driver)" вы3овет вот этого дяденьку "this.driver = driver;
+        //который возьмет драйвер и создаст waiter and webdriver. то есть мы как-то
+            //уже почистили код от ненужных вещей.
+
     private WebElement getHomeButton(){
         By homeBy = By.className("logout");
         wait.until(ExpectedConditions.visibilityOfElementLocated(homeBy));

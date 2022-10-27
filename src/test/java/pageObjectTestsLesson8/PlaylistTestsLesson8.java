@@ -14,24 +14,25 @@ import pageObjects.MainPage;
 import pageObjectsLesson8.LoginPageLesson8;
 import pageObjectsLesson8.MainPageLesson8;
 
-public class PlaylistTestsLesson8 {
+public class PlaylistTestsLesson8 extends BaseTestLesson8{ //31)
     private WebDriver driver;
-    @BeforeMethod
-    public void startUp(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-
-    }
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.quit();
-    }
+    //32) I can get rid of this.
+//    @BeforeMethod
+//    public void startUp(){
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//
+//    }
+//    @AfterMethod
+//    public void tearDown() throws InterruptedException {
+//        Thread.sleep(3000);
+//        driver.quit();
+//    }
     @Test
     public void playlistTest_createPlaylist_playlistCreated() {
         // 2)
 //        String playlistName = TestDataGenerator.getRandomString(7);
-        //19) to create readable names for playlist (download library):
+        //19) to create readable names for playlist (download library FAKER):
         Faker faker = new Faker();
         String playlistName = faker.funnyName().name();
 

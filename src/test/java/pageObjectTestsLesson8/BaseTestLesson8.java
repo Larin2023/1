@@ -5,9 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-
+// 27) create BaseTest
 public class BaseTestLesson8 {
-    protected WebDriver driver; //надо сделать WebDriver глобальным
+    protected WebDriver driver; // 29) надо сделать WebDriver глобальным
 
     // дело в том что я использую эти user name и password везде.
     // но представьте завтра мне захочется другое использовать.
@@ -15,6 +15,7 @@ public class BaseTestLesson8 {
     protected String username;
     protected String password;
 
+    // 28) Paste
     @BeforeMethod
     public void starUp()
 //            throws InterruptedException {

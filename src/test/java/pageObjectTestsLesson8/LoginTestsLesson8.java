@@ -11,19 +11,19 @@ import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
 
-public class LoginTestsLesson8 {
-    private WebDriver driver;
-    @BeforeMethod
-    public void startUp(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-
-    }
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.quit();
-    }
+public class LoginTestsLesson8 extends BaseTestLesson8{ // 30)
+//    private WebDriver driver;
+//    @BeforeMethod
+//    public void startUp(){
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//
+//    }
+//    @AfterMethod
+//    public void tearDown() throws InterruptedException {
+//        Thread.sleep(3000);
+//        driver.quit();
+//    }
     @Test
     public void loginTest_loginWithCorrectCredentials_mainPageOpened(){
         LoginPage loginPage = new LoginPage(driver);
