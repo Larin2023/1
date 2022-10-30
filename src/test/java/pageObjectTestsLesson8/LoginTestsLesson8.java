@@ -1,14 +1,16 @@
 package pageObjectTestsLesson8;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import io.github.bonigarcia.wdm.WebDriverManager;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+//import org.testng.annotations.AfterMethod;
+//import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pageObjects.LoginPage;
-import pageObjects.MainPage;
+//import pageObjects.LoginPage;
+//import pageObjects.MainPage;
+import pageObjectsLesson8.LoginPageLesson8;
+import pageObjectsLesson8.MainPageLesson8;
 
 
 public class LoginTestsLesson8 extends BaseTestLesson8{ // 30)
@@ -26,17 +28,19 @@ public class LoginTestsLesson8 extends BaseTestLesson8{ // 30)
 //    }
     @Test
     public void loginTest_loginWithCorrectCredentials_mainPageOpened(){
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.open();
-        MainPage mainPage = loginPage.loginToApp("alexander.v.anderson@gmail.com","te$t$tudent");
-        Assert.assertTrue(mainPage.isMainPage());
+        LoginPageLesson8 loginPageLesson8 = new LoginPageLesson8(driver);
+        loginPageLesson8.open();
+        //34) я убераю вот эту ерунду ("alexander.v.anderson@gmail.com","te$t$tudent") and replace it with (username, password);
+        MainPageLesson8 mainPageLesson8 = loginPageLesson8.loginToAppLesson8(username, password);
+        Assert.assertTrue(mainPageLesson8.isMainPageLesson8());
     }
     @Test
     public void loginTest_loginWithIncorrectCredentials_errorFrame(){
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.open();
-        loginPage.loginToApp("alexander.v.anderson@gmail.com","wrongPassword");
-        Assert.assertTrue(loginPage.isErrorFrame());
+        LoginPageLesson8 loginPageLesson8 = new LoginPageLesson8(driver);
+        loginPageLesson8.open();
+        // 35) here replace it with username, but lease "wrongPassword"
+        loginPageLesson8.loginToAppLesson8(username,"wrongPassword");
+        Assert.assertTrue(loginPageLesson8.isErrorFrame());
 
     }
 }
