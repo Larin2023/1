@@ -34,7 +34,7 @@
             <class name="pageObjectsTestsLesson11.LoginToAppFactoryLesson11">
                                                         <!--5)-->
                 <methods>
-                    <!--                  6)  два способа пропустить  тесты: или через testng.xml или напрямую в файле   -->
+                                                <!--        6)  два способа пропустить  тесты: или через testng.xml или напрямую в файле   -->
                     <include name="loginToApp_correctCredentials_successfulLogin"/>
                     <include name="loginToApp_incorrectCredentials_failedLogin"/>
                     <include name="loginToApp_correctCredentials_successfulLogin1"/>
@@ -44,8 +44,9 @@
                     <include name="loginToApp_correctCredentials_successfulLogin3"/>
                     <include name="loginToApp_incorrectCredentials_failedLogin3"/>
                 </methods>
+                                                <!--        7)   -->
             </class>
-            <class name="pageObjectsTests.LoginToApp">
+            <class name="pageObjectsTestsLesson11.LoginToAppLesson11">
                 <methods>
                     <include name="loginToApp_correctCredentials_successfulLogin"/>
                     <include name="loginToApp_incorrectCredentials_failedLogin"/>
@@ -56,8 +57,9 @@
                     <include name="loginToApp_correctCredentials_successfulLogin3"/>
                     <include name="loginToApp_incorrectCredentials_failedLogin3"/>
                 </methods>
+                                                        <!--   8)    -->
             </class>
-            <class name="pageObjectsTests.PlaylistTest">
+            <class name="pageObjectsTestsLesson11.PlaylistTestsLesson11">
                 <methods>
                     <include name="playlistTests_createPlaylist_playlistCreated"/>
                     <include name="playlistTests_renamePlaylist_playlistRename"/>

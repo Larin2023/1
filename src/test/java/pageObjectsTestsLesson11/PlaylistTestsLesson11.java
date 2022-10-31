@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
-public class PlaylistTestsLesson11 extends BaseTest{
+public class PlaylistTestsLesson11 extends BaseTestLesson11 {
     @Test
     public void playlistTest_createPlaylist_playlistCreated() {
         Faker faker = new Faker();

@@ -6,7 +6,7 @@ import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
 
-public class LoginToAppLesson11 extends BaseTest{
+public class LoginToAppLesson11 extends BaseTestLesson11 {
     @Test
     public void loginTest_loginWithCorrectCredentials_mainPageOpened(){
         LoginPage loginPage = new LoginPage(driver);
