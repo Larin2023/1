@@ -1,0 +1,74 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!--        @BeforeMethod и @AfterMethod запускаются перед каждым методом и после-->
+<!--        каждого метода, под словом метод, мы подразумеваем вот этот отдельный-->
+<!--        маленький тест но есть более крупная classification.-->
+<!--        https://testng.org/doc/documentation-main.html#annotations-->
+<!--        то есть это идет иерархии.-->
+<!--        самая маленькая частица  называется метод-->
+<!--        потом у нас есть тестовый класс-->
+<!--        и тестовый класс мы можем запустить что-то один раз перед и один раз в конце-->
+<!--        а можем и не запускать то есть мы можем даже совмещать иногда нам надо-->
+
+<!-- TestNG это как бы наш центральный командный пункт.
+для чего нам надо exclude тесты, ну например обновился функционал,
+и тест нападает. например добавили новую кнопку
+старый xpath упал и пока мы не можем его обновить поэтому он
+падает. это нормально. -->
+
+<!--TestNG позволяет запускать тесты параллельно-->
+                                                    <!-- 1) -->
+<suite name="Master Suit" parallel="classes" thread-count="3">
+    <!--    мы можем давать параметры-->
+    <!--    идея такая, данные иногда могут меняться, я не хочу бегать по моим тестовым файлам и
+    вспоминать где они у меня лежали. чтобы не бегать, я могу хранить их в TestNG.
+    потому что я не помню где они лежат, но я знаю что они для пароля очень нужны. -->
+    <parameter name="username" value="koeluser06@testpro.io"/>
+    <parameter name="password" value="te$t$tudent"/>
+    <parameter name="browser" value="XXXX"/>
+                                                    <!--    2)  -->
+    <test name="Main test">
+                                                    <!--    3)   -->
+        <classes>
+                                <!--  4) add:  name="pageObjectsTestsLesson11.LoginToAppFactoryLesson11" -->
+            <class name="pageObjectsTestsLesson11.LoginToAppFactoryLesson11">
+                                                        <!--5)-->
+                <methods>
+                    <!--                  6)  два способа пропустить  тесты: или через testng.xml или напрямую в файле   -->
+                    <include name="loginToApp_correctCredentials_successfulLogin"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin1"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin1"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin2"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin2"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin3"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin3"/>
+                </methods>
+            </class>
+            <class name="pageObjectsTests.LoginToApp">
+                <methods>
+                    <include name="loginToApp_correctCredentials_successfulLogin"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin1"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin1"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin2"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin2"/>
+                    <include name="loginToApp_correctCredentials_successfulLogin3"/>
+                    <include name="loginToApp_incorrectCredentials_failedLogin3"/>
+                </methods>
+            </class>
+            <class name="pageObjectsTests.PlaylistTest">
+                <methods>
+                    <include name="playlistTests_createPlaylist_playlistCreated"/>
+                    <include name="playlistTests_renamePlaylist_playlistRename"/>
+                    <include name="playlistTests_createPlaylist_playlistCreated1"/>
+                    <include name="playlistTests_renamePlaylist_playlistRename1"/>
+                    <include name="playlistTests_createPlaylist_playlistCreated2"/>
+                    <include name="playlistTests_renamePlaylist_playlistRename2"/>
+                    <include name="playlistTests_createPlaylist_playlistCreated3"/>
+                    <include name="playlistTests_renamePlaylist_playlistRename3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

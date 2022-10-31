@@ -2,7 +2,7 @@ package PageObjectTestLesson10;
 import EnumLesson10.BrowserTypeLesson10;
 import helpersLesson10.BrowserFactory;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.BrowserType;
+//import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
