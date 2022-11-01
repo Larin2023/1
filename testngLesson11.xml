@@ -15,15 +15,15 @@
 и тест нападает. например добавили новую кнопку
 старый xpath упал и пока мы не можем его обновить поэтому он
 падает. это нормально. -->
-
-<!--TestNG позволяет запускать тесты параллельно-->
+                                                    <!-- 9) -->
+<!--TestNG позволяет запускать тесты параллельно: parallel="classes" thread-count="3"-->
                                                     <!-- 1) -->
 <suite name="Master Suit" parallel="classes" thread-count="3">
-    <!--    мы можем давать параметры-->
+                                                <!--    10) мы можем давать параметры-->
     <!--    идея такая, данные иногда могут меняться, я не хочу бегать по моим тестовым файлам и
     вспоминать где они у меня лежали. чтобы не бегать, я могу хранить их в TestNG.
     потому что я не помню где они лежат, но я знаю что они для пароля очень нужны. -->
-    <parameter name="username" value="koeluser06@testpro.io"/>
+    <parameter name="username" value="alexander.v.anderson@gmail.com"/>
     <parameter name="password" value="te$t$tudent"/>
     <parameter name="browser" value="XXXX"/>
                                                     <!--    2)  -->

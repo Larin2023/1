@@ -1,0 +1,31 @@
+<!-- 1) это файл xml который указывает где у нас происходит логин,
+куда он записывается и какой у нас pattern то есть смотрите первое,
+логи будут записываться вот этот файл logs/app.log -->
+<!-- Logger на самом деле это дневник, мы пишем дневник для
+самих себя. все это происходит для того чтобы вы потом могли
+поискать ошибку  -->
+<!-- существует уровни debug -->
+<!-- FATAL, ERROR, WARN, INFO, DEBUG, TRACE, ALL, and OFF. -->
+
+<!-- иногда юзер вам будет говорить: я не могу создать папку.
+ а потом вы открываете лог и смотрите что юзер пытается создать папку и звездочка, звездочка.
+запрещенный символ и вы ему говорите не так нельзя. со звездочкой нельзя создавать-->
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="DEBUG">
+    <Appenders>
+        <File name="LogToFile" fileName="logs/app.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="io.testpro" level="debug" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+        </Logger>
+        <Root level="trace">
+            <AppenderRef ref="LogToFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

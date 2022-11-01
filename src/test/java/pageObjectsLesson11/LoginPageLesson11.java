@@ -26,11 +26,11 @@ public class LoginPageLesson11 extends BasePageLesson11 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(errorBy));
         return driver.findElement(errorBy);
     }
-    public MainPage loginToApp(String username, String password){
+    public MainPageLesson11 loginToAppLesson11(String username, String password){
         getEmailField().sendKeys(username);
         getPasswordField().sendKeys(password);
         getLoginButton().click();
-        return new MainPage(driver);
+        return new MainPageLesson11(driver);
     }
 
     public void open(String url) {

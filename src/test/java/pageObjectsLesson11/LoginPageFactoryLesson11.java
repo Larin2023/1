@@ -13,7 +13,6 @@ public class LoginPageFactoryLesson11 {
         AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,10);
         PageFactory.initElements(factory, this);
     }
-
     private WebDriver driver;
 
     @FindBy(css = "[type='email']")
@@ -39,10 +38,10 @@ public class LoginPageFactoryLesson11 {
             return false;
         }
     }
-    public MainPage loginToApp(String username, String password){
+    public MainPageLesson11 loginToAppLesson11(String username, String password){
         email.sendKeys(username);
         this.password.sendKeys(password);
         loginButton.click();
-        return new MainPage(driver);
+        return new MainPageLesson11(driver);
     }
 }
