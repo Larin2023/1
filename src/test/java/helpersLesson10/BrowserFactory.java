@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.opera.OperaDriver;
+
 
 public class BrowserFactory {
     // 5)
@@ -25,9 +25,9 @@ public class BrowserFactory {
             }
 
             // 11)
-            case OPERA -> {
-                return getOperaDriver();
-            }
+//            case OPERA -> {
+//                return getOperaDriver();
+//            }
 
 ////13)
             case FIREFOX -> {
@@ -70,12 +70,12 @@ public class BrowserFactory {
         return new FirefoxDriver(options);
     }
 
-    //10)
-    private static WebDriver getOperaDriver() {
-        WebDriverManager.operadriver().setup();
-        return new OperaDriver();
-    }
-
+//    //10)
+//    private static WebDriver getOperaDriver() {
+//        WebDriverManager.operadriver().setup();
+//        return new OperaDriver();
+//    }
+//
 
     //12)
     private static WebDriver getEdgeDriver() {
