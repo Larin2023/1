@@ -10,6 +10,7 @@ public class App {
     //иногда нам надо сделать это не подряд we use FUNCTIONS
 
     //    public static void main(String[] args) {
+
 //        System.out.println("Today is Monday");
 //        System.out.println("Hi, Students");
 //        System.out.println("Let start out lesson");
