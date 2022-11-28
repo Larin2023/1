@@ -24,7 +24,7 @@ public class Student {
         this.major = major;
     }
 
-    // 11)
+    // 11)  // There can be constructors with same name but with different parameters
     public Student(String name, String lastName, int year) {
         this.name = name;
         this.lastName = lastName;

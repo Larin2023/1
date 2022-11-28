@@ -3,7 +3,7 @@ package Lesson9EncapsulationGettersSettersConstructors;
 public class App1 {
 
     // 10)
-    //когда все поля оптом заполнять. чтобы не по одному а оптом - можно
+    //когда все поля оптом заполнять. чтобы не по одному а оптом - можно.
     //для этого нам нужен "конструктор"
     public static void main(String[] args) {
         Student ann = new Student("Anna", "Jones", 2001, "Math");

@@ -1,13 +1,12 @@
 package Lesson10Inheritance;
 
 public class Person {
-    // 1)
+                                                    // 7) в классе person я
+                                                    // должен променять private на protected
     protected String name;
     protected String lastName;
     protected int year;
-    //"протектор" точно так же не видно снаружи они как "Private" но они ведны из саб-классов "child классов"
-
-    // 2) make constructor
+    // "протектор" точно так же не видно снаружи они как "Private" но они ведны из саб-классов "child классов"
     public Person(){
     }
 
@@ -21,12 +20,8 @@ public class Person {
         this.name = name;
         this.lastName = lastName;
     }
-
-    //Getter не может быть void потому что он должен делать return
-
+    // Getter не может быть void потому что он должен делать return
 }
-
-
 //    int x =5; // Setter x
 //    int y = x; // Getter x - Setter for y
 

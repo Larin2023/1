@@ -41,7 +41,7 @@ public class App {
         //exception --- такая ошибка в джаве которая говорит что в файле App.main
         //вы допустили эксепшен. у вас вы пытаетесь сделать index 10
         //где всего 7 элементов вы делаете что то не то.
-        System.out.println(colors[10]);
+//        System.out.println(colors[10]);
         //"Exception in thread "main" java.lang. ArrayIndexOutOfBoundsException Create breakpoint : Index 10 out of bounds for length 7
         //at App.main(App.java:11)"
 

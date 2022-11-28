@@ -6,7 +6,7 @@ public class App {
         //Boolean algebra
 
 
-        int age = 25;
+        int age = 10;
 
         boolean condition = age >=21;
 
@@ -72,7 +72,7 @@ public class App {
         boolean a3 = (5==5) && (5==6);
         System.out.println("a3="+a3);
         boolean a4 = (5==5) && (5!=6);
-        System.out.println("a4"+a4);
+        System.out.println("a4="+a4);
 
     }
 }

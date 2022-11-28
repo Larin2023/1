@@ -8,7 +8,7 @@ public class App {
         System.out.println(david.getName());
 
         // 4)
-        david.setYear(-25);
+        david.setYear(1999);
         System.out.println(david.getYear());
         //по программе мы сделали все правильно потому что int может быть отрицательным числом,
         // но по смыслу мы совершили логическую ошибку.
