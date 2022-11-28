@@ -13,7 +13,7 @@ public class App2 {
 
         circleLength(5);
     }
-    //FUNCTION to print names
+    /////FUNCTION to print names
     public static void hello(String name){
         System.out.println("Hello "+name);
     }
