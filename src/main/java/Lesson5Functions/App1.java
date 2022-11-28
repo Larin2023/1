@@ -3,9 +3,25 @@ package Lesson5Functions;
 public class App1 {
 
     public static void main(String[] args) {
-        hey();
+        $$$$$();
     }
-    public static void hey(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static void $$$$$(){
         System.out.println("Hey-Hey");
         System.out.println("Nice to meet you");  /// If you run the function it wouldn't print
     }

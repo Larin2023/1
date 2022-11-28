@@ -9,12 +9,14 @@ public class Student extends Person {
 //  private int year;
                                                     // 3)
     private Subject major;
+                                                    // 26) "массив констант"
+                                                        // наш студент помимо major у него 4-5 предметов изучать
+                                                        // соответственно это будет какой-то Array of Subjects
     private Subject[] subjects;
-
+                                                    // 27 ) я сделаю для этого subjects:  setSubjects and getSubjects
     public void setSubjects(Subject[] subjects) {
         this.subjects = subjects;
     }
-
     public Subject[] getSubjects() {
         return subjects;
     }

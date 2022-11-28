@@ -25,3 +25,6 @@ public class Person {
 //    int x =5; // Setter x
 //    int y = x; // Getter x - Setter for y
 
+                                                        // 15)
+// родительский класс in Java называется Super класс
+

@@ -6,7 +6,7 @@ public class App {
         //LOOPS
 
         //в программировании нам надо повторить какую-то операцию определенное количество раз два раза 5 раз сто раз
-        //как это сделать? например я должен вывести запись хай fife раза:
+        //как это сделать? например я должен вывести запись Hey fife раза:
         //    System.out.println("Hey");
         //    System.out.println("Hey");
         //    System.out.println("Hey");
@@ -35,7 +35,7 @@ public class App {
         //инициализация работает только один раз
         //когда мы заходим в циклы
 
-        //и спрашиваем 5 меньше 5 = not это false и мы выходим from LOOP.
+        //и спрашиваем: 5 меньше 5 = not это false и мы выходим from LOOP.
         //если true мы заходим in loop, если нет мы из него выходим.
         System.out.println("-------------------------------------");
 
@@ -86,15 +86,19 @@ public class App {
         do {
             System.out.println("hi");
         } while (xx);
+
+
         System.out.println("-------------------------------------");
 
 
-
-        // loops working with Arrays to print all elements:
+        //  to print all elements:
         int[] numbers = {2, 2, 3, 4, 2, 7, 8, 3000, 4, 6, 7, 3, 6, 3};
         for (int i = 0; i < numbers.length; i++) {
             System.out.println(numbers[i]);
         }
+
+
+
         System.out.println("-------------------------------------");
 
 

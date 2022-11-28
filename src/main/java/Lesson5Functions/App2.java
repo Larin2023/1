@@ -2,25 +2,31 @@ package Lesson5Functions;
 
 public class App2 {
 
-    public static void main(String[] args) {
-        hello("Mike"); //но у меня у этой функции есть параметр string name
-        hello("Irina");
+    public static void main(String[] args) {            //тут мы вызываем
+        $$$$$("Mike"); //но у меня у этой функции есть параметр "String name"
+        $$$$$("Irina");
+
         String xx = "Jack";
+        $$$$$(xx);
 
-        hello(xx);
         String ff ="FF";
-        hello(ff);
+        $$$$$(ff);
 
-        circleLength(5);
+        CCC(5);
+
+        VVV(1,1,3);
+        VVV(5,10,20);
     }
     /////FUNCTION to print names
-    public static void hello(String name){
-        System.out.println("Hello "+name);
+    public static void $$$$$(String name){                    //тут мы определяем
+        System.out.println("Hello "+name);                    //вводим
     }
     // FUNCTION to calculate radius of circle
-    public static void circleLength(double radius){
-
-        System.out.println("Circle length = "+ 3.14*radius);
+    public static void CCC(double radius){                    //тут мы определяем
+        System.out.println("Circle length = "+ 3.14*2*radius);//вводим
+    }
+    public static void VVV(int a, int b, int c){              //тут мы определяем
+        System.out.println(a+b+c);                            //вводим
     }
 }
 //функции могут быть с параметрами

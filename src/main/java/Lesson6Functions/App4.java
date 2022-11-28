@@ -12,7 +12,7 @@ public class App4 {
         y+=0.2;
         System.out.println("y="+y);
 
-        int z =(int)y;
+        int z =(int)y;  // <----------------------------------CASTING
         System.out.println("z="+z);
 
     }
