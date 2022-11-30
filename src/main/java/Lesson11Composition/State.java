@@ -1,5 +1,5 @@
 package Lesson11Composition;
- // 3)
+                                            // 3)
 public enum State {
     CA,
     NY,

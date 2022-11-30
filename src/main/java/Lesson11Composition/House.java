@@ -1,6 +1,7 @@
 package Lesson11Composition;
 
-// 12) new class
+                                                        // 12)
+                                                        // new class House
 public class House {
     private Address address;
     private Person owner;
@@ -8,7 +9,8 @@ public class House {
     private int bathrooms;
     private int year;
 
-    // 13) make constructor
+                                                        // 13)
+                                                        // make constructor
     public House(Address address, Person owner, int bedrooms, int bathrooms, int year) {
         this.address = address;
         this.owner = owner;
@@ -17,7 +19,8 @@ public class House {
         this.year = year;
     }
 
-    // 14) make only getters
+                                                        // 14)
+                                                        // make only getters
     public Address getAddress() {
         return address;
     }

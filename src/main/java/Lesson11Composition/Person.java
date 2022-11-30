@@ -1,11 +1,12 @@
 package Lesson11Composition;
-// 6)
+                                                            // 6)
 public class Person {
     private Address address;
     private String name;
     private String lastName;
     private int year;
-// 7) constructor
+                                                            // 7)
+                                                            // constructor
     public Person(Address address, String name, String lastName, int year) {
         this.address = address;
         this.name = name;
@@ -13,7 +14,8 @@ public class Person {
         this.year = year;
 
     }
-// 8) create getter and setters
+                                                            // 8)
+                                                            // create getter and setters
     public Address getAddress() {
         return address;
     }
