@@ -7,6 +7,8 @@ import java.util.List;
 public class App2 {
     public static void main(String[] args) {
         // 8)
+        //первое нам надо вытащить итератор отсюда.
+
         List<String> fruits = new ArrayList<>();
         fruits.add("apple");
         fruits.add("peach");

@@ -1,10 +1,10 @@
-package tickets;
+package ticketsLesson1;
 
-public class App {
+public class AppLesson1 {
 
     // 2)
     public static void main(String[] args) {
-        Tickets passenger = new Tickets(75, 1000);
+        TicketsLesson1 passenger = new TicketsLesson1(75, 1000);
         System.out.println(passenger.getPrice());
     }
 }

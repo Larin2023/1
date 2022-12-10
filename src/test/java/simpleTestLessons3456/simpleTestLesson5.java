@@ -1,4 +1,4 @@
-package simpleTest;
+package simpleTestLessons3456;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

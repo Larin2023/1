@@ -1,4 +1,4 @@
-package simpleTest;
+package simpleTestLessons3456;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 //Synchronizations
 
 // 1) мы работаем с фронтэнд. некоторые элементы у нас подгружаются не сразу.

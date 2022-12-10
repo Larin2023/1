@@ -1,6 +1,6 @@
-package tickets;
+package ticketsLesson1;
 
-public class Tickets {
+public class TicketsLesson1 {
 
     // 1)
 
@@ -16,7 +16,7 @@ public class Tickets {
     private double basePrice;
 
     //теперь я создам конструктор который будет вот эти две вещи брать
-    public Tickets(int age, double basePrice) {
+    public TicketsLesson1(int age, double basePrice) {
         this.age = age;
         this.basePrice = basePrice;
     }

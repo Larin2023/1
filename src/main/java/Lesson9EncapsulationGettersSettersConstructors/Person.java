@@ -6,7 +6,7 @@ public class Person {
     private String lastName;
     private int year;
     //правил инкапсуляции (security) говорит что поля класса не видно снаружи для
-    //этого мы помечаем их как private i.e You won't see them in App OBJECTS
+    //этого мы помечаем их как private i.e You won't see them in AppLesson1 OBJECTS
 
     // But how do we get the access?
     //доступ к полям класса происходит через методы. то есть чтобы

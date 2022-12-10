@@ -5,11 +5,10 @@ public class App {
 
         //Boolean algebra
 
-
         int age = 10;
 
+        // Condition
         boolean condition = age >=21;
-
 
         if(age>=21) {
             System.out.println("You can buy beer");

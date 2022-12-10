@@ -38,12 +38,12 @@ public class App {
 
         //а если я захочу сделать System.out.println(colors[10]);
         // Exception error (out of bounds):
-        //exception --- такая ошибка в джаве которая говорит что в файле App.main
+        //exception --- такая ошибка в джаве которая говорит что в файле AppLesson1.main
         //вы допустили эксепшен. у вас вы пытаетесь сделать index 10
         //где всего 7 элементов вы делаете что то не то.
 //        System.out.println(colors[10]);
         //"Exception in thread "main" java.lang. ArrayIndexOutOfBoundsException Create breakpoint : Index 10 out of bounds for length 7
-        //at App.main(App.java:11)"
+        //at AppLesson1.main(AppLesson1.java:11)"
 
 
 

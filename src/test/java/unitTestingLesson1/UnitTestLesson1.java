@@ -1,8 +1,8 @@
-package unitTesting;
+package unitTestingLesson1;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import tickets.Tickets;
+import ticketsLesson1.TicketsLesson1;
 
         // 3
 //testng позволяет нам писать аннотации "@Test"
@@ -15,7 +15,7 @@ import tickets.Tickets;
 // юнит-тесты пишется для public методов.
 // мы тестируем только один метод за раз.
 // мы не можем тестировать несколько мы тестируем один метод
-public class UnitTest {
+public class UnitTestLesson1 {
     @Test //testng позволяет нам писать аннотации, //нам отвечает за запуск из-за assert.
 
     //convention гласит, название теста вы делите на 3 части
@@ -26,7 +26,7 @@ public class UnitTest {
     //я ожидаю что цена будет 0.
     public void ticketsTest_infant_priceIsZero(){
         // Arrange - Given
-        Tickets infant = new Tickets(1,1000); //это я сделал начальный объект
+        TicketsLesson1 infant = new TicketsLesson1(1,1000); //это я сделал начальный объект
 
         // Act - When
         double result = infant.getPrice(); //я делаю сколько стоит
@@ -44,19 +44,19 @@ public class UnitTest {
 
     @Test
     public void ticketsTest_child_priceIs50percent(){
-        Tickets child = new Tickets(8, 1000);
+        TicketsLesson1 child = new TicketsLesson1(8, 1000);
         double result = child.getPrice();
         Assert.assertEquals(result, 500.0);
     }
     @Test
     public void ticketsTest_adult_fullPrice(){
-        Tickets adult = new Tickets(18, 1000);
+        TicketsLesson1 adult = new TicketsLesson1(18, 1000);
         double result = adult.getPrice();
         Assert.assertEquals(result,1000.0);
     }
     @Test
     public void ticketsTest_senior_priceIs80percent(){
-        Tickets senior = new Tickets(78, 1000);
+        TicketsLesson1 senior = new TicketsLesson1(78, 1000);
         double result = senior.getPrice();
         Assert.assertEquals(result,800.0);
     }
