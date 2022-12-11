@@ -35,7 +35,9 @@ public class App {
 
                                                                     // 22)
 // я могу добавить
-//хоть сколько sap классов
+//хоть сколько subclass (child).
+// subclass (child) - the class that inherits from another class
+// superclass (parent) - the class being inherited from
                                                                     // 23)
 // второй популярный вопрос: а можно ли наследовать
 //больше чем одного класса то есть можно ли одновременно расширять 2 3 4 класса --

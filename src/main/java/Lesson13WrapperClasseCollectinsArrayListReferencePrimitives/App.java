@@ -3,6 +3,7 @@ package Lesson13WrapperClasseCollectinsArrayListReferencePrimitives;
 public class App {
     public static void main(String[] args) {
         // 1)
+        //https://stackoverflow.com/questions/20697868/why-we-need-wrapper-class
         //"wrapper" по-английски это обертка то
         //есть они взяли примитив и обернули его сделалис из него классы
         //java для свой унификация сделала wrapper

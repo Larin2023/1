@@ -7,7 +7,7 @@ public class Person {
     public String name;
     public String lastName;
     public int year;
-    //теперь давайте создадим этот объект. окей я иду в AppLesson1
+    //теперь давайте создадим этот объект. окей я иду в App
 
 
     // 9)
