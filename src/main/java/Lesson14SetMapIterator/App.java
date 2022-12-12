@@ -12,9 +12,9 @@ public class App {
         //        HashSet<String> cities = new HashSet<>();
         Set<String> cities = new HashSet<>();
 
-        //      deference between "Set" and "Array List"?
-        //      no индексов. "Set" is like мешок, то есть вы туда кладете
-        //      и там порядка нету.
+        //      deference between "Set" and "Array List":
+        //     -  no индексов. "Set" is like мешок, то есть вы туда кладете
+        //     -  и там порядка нету.
 
         cities.add("Washington");
         cities.add("NYC");
@@ -30,8 +30,8 @@ public class App {
         System.out.println(cities.contains("LA")); // eсли какого-то города нету -- будет false
 
 
-        //SET это такая структура хранит только уникальные вещи
-        //eдинственный из кейсoB где мы можем использовать это. это задачей по интервью
+        //SET это такая структура Джавы которая хранит только уникальные вещи
+        //eдинственный из кейсoB где мы можем использовать это. это задачей по интервью!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         // 4)
         //итерация по SET очень просто:
