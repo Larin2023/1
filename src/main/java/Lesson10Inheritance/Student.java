@@ -41,6 +41,7 @@ public class Student extends Person {
                                                         // 11) я удалю: setName, getName, getLastName, setLastName,
                                                         // getYear, setYear. I don't need all of these потому что я буду
                                                         ////пользоваться setters and getters из родительского класса
+                                                        // with "super" method
 //public void setName(String name) {
 //        this.name = name;
 //        }

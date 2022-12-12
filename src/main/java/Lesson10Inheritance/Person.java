@@ -22,7 +22,7 @@ public class Person {
     }
     // Getter не может быть void потому что он должен делать return
 }
-//    int x =5; // Setter x
+//    int x = 5; // Setter x
 //    int y = x; // Getter x - Setter for y
 
                                                         // 15)

@@ -17,7 +17,7 @@ public class App {
 
     //RUN: Exception in thread "main" java.lang.IllegalArgumentException: Wrong year
     //	at Person.setYear(Person.java:26)
-    //	at App.main(App.java:9)
+    //	at AppLesson1.main(AppLesson1.java:9)
     // Exception is an error "Out of bound"
 
 

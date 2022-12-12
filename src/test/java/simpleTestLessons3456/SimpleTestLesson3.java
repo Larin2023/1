@@ -1,4 +1,4 @@
-package simpleTest;
+package simpleTestLessons3456;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class SimpleTest {
+public class SimpleTestLesson3 {
     // 1)
     //нужно закачать в наш проект chrome драйвер
     @Test

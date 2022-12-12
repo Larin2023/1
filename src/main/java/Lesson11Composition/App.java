@@ -29,9 +29,9 @@ public class App {
         //я хочу вытащить address из этого дома, а ну конечно я могу сразу напрямую адрес вытащить но я
         //допустим хочу вытащить через person:
         // streetAddressOfDavid = house.getOwner() --- у него возвращаемый тип person.
-        //вот этот объект "house.getOwner()" целиком is person
-        //streetAddressOfDavid = house.getOwner().getAddress() -- теперь вот у этой всей мешанины тип Address
-        //streetAddressOfDavid = house.getOwner().getAddress().getAddressLine1(); --- теперь вот у этой всей мешанины тип String
+        //вот этот объект "house.getOwner()" целиком is "person"
+        //streetAddressOfDavid = house.getOwner().getAddress() -- теперь вот у этой всей мешанины тип "Address"
+        //streetAddressOfDavid = house.getOwner().getAddress().getAddressLine1(); --- теперь вот у этой всей мешанины тип "String"
         //вот такая вот взаимодействие классов называется "композицией"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //B настоящей жизни предметы состоят из других предметов.
         //"string" это тоже класс и мы с этим уже давно работаем.

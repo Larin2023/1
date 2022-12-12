@@ -2,7 +2,7 @@ package unitTestingLesson11;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import tickets.Tickets;
+import ticketsLesson1.TicketsLesson1;
 
 
 public class UnitTestDataProviderLesson11 {
@@ -21,7 +21,7 @@ public class UnitTestDataProviderLesson11 {
     }
     @Test (dataProvider = "tickets")
     public void ticketsTest_all_depends(int age, double price, int fare){
-        Tickets adult = new Tickets(age, fare);
+        TicketsLesson1 adult = new TicketsLesson1(age, fare);
         double result = adult.getPrice();
         Assert.assertEquals(result,price);
     }

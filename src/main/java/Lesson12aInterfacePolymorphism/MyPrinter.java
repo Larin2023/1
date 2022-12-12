@@ -1,7 +1,7 @@
 package Lesson12aInterfacePolymorphism;
 
     // 2)
-public class MyPrinter implements IAmericanElectricalPlug{
+    public class MyPrinter implements IAmericanElectricalPlug{
     // 5)
     private String brand;
     private String model;
@@ -25,7 +25,7 @@ public class MyPrinter implements IAmericanElectricalPlug{
     public int returnVoltage() {
         return 12;
 
-        // 6) мы можем extended только один класс
+        // 6) мы можем extended только один класс,
         //имплементировать мы можем многое интерфейсов
 
         //интерфейс имеет абстрактные функции

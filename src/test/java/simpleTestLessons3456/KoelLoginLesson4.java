@@ -1,4 +1,4 @@
-package simpleTest;
+package simpleTestLessons3456;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class KoelLogin {
+public class KoelLoginLesson4 {
 
      //  1) позетивный тест
 

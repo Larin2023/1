@@ -22,8 +22,9 @@ public class App1 {
         //значит они не совместимы с объектами. мы не можем вызывать статическую функцию
         //или статическую переменную из объекта
 
+        // 3) создадим персона Ann
         Person ann = new Person("Anna", "Miller");
-        ann.getName();
+        ann.getName(); //а не вижу методы "sayHello", у я его не вижу потому что он static
 
         Person.sayHello();
 
