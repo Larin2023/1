@@ -1,4 +1,4 @@
-package helpersLesson8.helpersLesson11;
+package helpers.helpersLesson11;
 
 import EnumLesson11.BrowserTypeLesson11;
 import io.github.bonigarcia.wdm.WebDriverManager;

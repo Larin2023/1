@@ -1,4 +1,4 @@
-/* 9) */
+                                    /* 9) */
 
 body {
 background-color: lightblue;
@@ -9,16 +9,16 @@ color: white;
 text-align: center;
 }
 /*"точка" это говорит класс, то есть класс cc. in HTML  <div class="cc">*/
-/* 13) */
+                                    /* 13) */
 .cc {
 font-family: arial;
 font-size: 20px;
 }
-/* 14)*/
+                                    /* 14)*/
 .vv {
 color:yellow;
 }
-/* 19 */
+                                        /* 19 */
 #jie{
 color:red;
 }

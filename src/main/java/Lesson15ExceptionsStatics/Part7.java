@@ -4,7 +4,7 @@ public class Part7 {
     //идея блока Finally. мы в block попадаем в любом случай.
     // произошел exception или не произошло мы попадаем в block finally.
 
-    //произошел у нас трой кетч или нет
+    //произошел у нас трай кетч или нет
     //произошел нас exception или нет закрой базу данных
 
     public static void main(String[] args) {

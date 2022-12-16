@@ -1,7 +1,7 @@
 package pageObjectsTestsLesson11;
 
 import EnumLesson11.BrowserTypeLesson11;
-import helpersLesson8.helpersLesson11.BrowserFabricLesson11;
+import helpers.helpersLesson11.BrowserFabricLesson11;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

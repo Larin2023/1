@@ -1,4 +1,4 @@
-package helpersLesson8.helpersLesson11;
+package helpers.helpersLesson11;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

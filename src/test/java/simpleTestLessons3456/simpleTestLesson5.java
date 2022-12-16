@@ -15,12 +15,12 @@ import org.testng.annotations.Test;
 //для того чтобы сделать код более сухим здесь нам помогает testng
 
 public class simpleTestLesson5 {
-    private WebDriver driver; // 3) webdriver который я создал здесь
-//    он не будет видим. за его пределами он не виден.
+    private WebDriver driver; // 3) webdriver который я создал здесь.
+//    не будет видим. за его пределами он не виден.
 //    надо сделать его  WebDriver глобальным
 
     // 1)
-    @BeforeMethod  // annotation мы ставим перед какой-нибудь функции
+    @BeforeMethod  // annotation BeforeMethod мы ставим перед какой-нибудь функции
     public void starUp() throws InterruptedException {
 
     // 2)
@@ -35,8 +35,8 @@ public class simpleTestLesson5 {
         driver.get("https://bbb.testpro.io/");
         Thread.sleep(1000);
     }
-    // 4) что нам дает автор метод?
-    //даже если тест упал, автор метод все
+    // 4) что нам дает AfterMethod?
+    //даже если тест упал, AfterMethod все
     //равно будет запущен то есть мы все равно закроем наш драйвер.
     @AfterMethod
     public void tearDown() throws InterruptedException {

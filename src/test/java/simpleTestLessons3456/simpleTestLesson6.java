@@ -18,13 +18,13 @@ import java.time.Duration;
 // с этим борется синхронизации.
 
 // вообще есть два вида синхронизации implicit wait and explicit wait.
-//implicit wait подразумевает неявноею.
+//implicit wait подразумевает неявное.
 // explicit wait = явное.
 // елементы через какое-то время появляется, через
 //какое-то время исчезают. то есть вот такие вещи мы хотим понять как с этим работать.
 
 //explicit wait ставится только там где нам надо ждать.
-// implicit wait ждет по чуть чутьно везде.
+// implicit wait ждет по чуть чуть но везде.
 
 // 2) уберем все thread слипы, они нам не нужны.
 
@@ -41,7 +41,7 @@ public class simpleTestLesson6 {
         driver = new ChromeDriver();
         driver.get("https://bbb.testpro.io/");
 
-        // 2) (this method is deprecated!!!!!!) после создания драйвера, мы должны установить implicit wait
+        // 2) (this implicit wait method is deprecated!!!!!!) после создания драйвера, мы должны установить implicit wait
         // driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         //я написал если элемента нету, жди его 10 секунд максимум, если 10
         //секунд прошло элемент не появился значит скорее всего
@@ -56,7 +56,7 @@ public class simpleTestLesson6 {
         //2 types of explicit wait (Thread.sleep это один из видов explicit wait):
         // Wait<WebDriver> wait and fluentWait
         //лишние секунды мы убрали, теперь мы ждём ровно столько сколько нам надо.
-        //благодаря вот этой переменной webdriver wait. ждем максимум 5 секунд через
+        //благодаря вот этой переменной "webdriverwait" ждем максимум 5 секунд через
         //каждые 200 миллисекунд мы опрашиваем дом и мы ее ставим только в том месте где
         //нам действительно надо ждать.
         //если в Thread.sleep мы пишем 2 секунды. а вдруг элемент появился ну через пол секунды.
