@@ -31,8 +31,11 @@ public class PlaylistTestsLesson8 extends BaseTestLesson8{ //31)
     @Test
     public void playlistTest_createPlaylist_playlistCreated() {
         // 2)
-//        String playlistName = TestDataGenerator.getRandomString(7);
-        //19) to create readable names for playlist (download library FAKER):
+        // String playlistName = TestDataGenerator.getRandomString(7); // генерируется a random string длиной 7 символов
+        // мы будем использовать эту случайную строку для создания плейлистов
+
+        //19)
+        // to create readable names for playlist (download library FAKER):
         Faker faker = new Faker();
         String playlistName = faker.funnyName().name();
 
@@ -42,12 +45,20 @@ public class PlaylistTestsLesson8 extends BaseTestLesson8{ //31)
         MainPageLesson8 mainPageLesson8 = loginPageLesson8.loginToAppLesson8(username, password);
         // 33) представьте завтра мне захочется другую email использовать. я язасунуть it in base test.
 
+//3)
+        // теперь я в эту функцию подаю плейлист который я сгенерировал playlistName
         //mainPageLesson8.createPlaylistLesson8(playlistName);  // this line is changing on step #14.
+        // теперь мне надо этой функции дать реальное тело.
+        // GO TO --------> MainPage
 
-        // 14) хочу чтобы вы вернули плейлист айди: I am adding: "String playlistId = "
+//11)
+        // хочу чтобы вы вернули плейлист айди: I am adding: "String playlistId = "
         String playlistId = mainPageLesson8.createPlaylistLesson8(playlistName);
+        // GO TO --------> MainPage
 
-        // 17)
+//14)
+        // теперь мне надо новую функцию создать которая проверит если плейлист екзист
         Assert.assertTrue(mainPageLesson8.isPlaylistExistLesson8(playlistId,playlistName));
+        // GO TO --------> MainPage
     }
 }
