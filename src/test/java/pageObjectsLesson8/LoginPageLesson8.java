@@ -1,25 +1,34 @@
-package pageObjectsLesson8;
+    package pageObjectsLesson8;
 
-import org.openqa.selenium.By;
+    import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-//import org.openqa.selenium.support.ui.WebDriverWait;
+    //import org.openqa.selenium.support.ui.WebDriverWait;
 
-//import java.time.Duration;
+    //import java.time.Duration;
 
-public class LoginPageLesson8 extends BasePageLesson8{ //25)
+//23)
+    // LoginPageLesson8 extends BasePageLesson8
+    public class LoginPageLesson8 extends BasePageLesson8{
 
-//    private WebDriver driver;
-//    private WebDriverWait wait;
+//24)
+    // delete two lines:
+    //    private WebDriver driver;
+    //    private WebDriverWait wait;
 
     public LoginPageLesson8 (WebDriver driver) {
-//        this.driver = driver;
-//        wait = new WebDriverWait(driver, Duration.ofSeconds(5, 1));
-        // 26)
+//25)
+    // delete two lines:
+    //        this.driver = driver;
+    //        wait = new WebDriverWait(driver, Duration.ofSeconds(5, 1));// 26)
+
+//26)
         super(driver);
     }
+    // create new ------> BaseTest
+
     private WebElement getEmailField(){
         By emailBy = By.xpath("//*[@type='email']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));

@@ -3,13 +3,13 @@
     package pageObjectsLesson8;
 
     import org.openqa.selenium.*;
-//import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+    //import org.openqa.selenium.interactions.Actions;
+    import org.openqa.selenium.support.ui.ExpectedConditions;
     // import org.openqa.selenium.support.ui.WebDriverWait;
 
     //import java.time.Duration;
 
-    public class MainPageLesson8 extends BasePageLesson8 { //22) mainPage будет extended basePage
+    public class MainPageLesson8 extends BasePageLesson8 {
 
 //21)
     // засунем in BasePage. наши вейтеры и наши драйверы
@@ -17,10 +17,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
     //    private WebDriverWait wait;
 
     public MainPageLesson8(WebDriver driver) {
+//20)
+    //         I will move   wait = new WebDriverWait(driver, Duration.ofSeconds(5, 1)); to BasePage
     //        this.driver = driver;
     //        wait = new WebDriverWait(driver, Duration.ofSeconds(5, 1));
 
+//22)
+        // я говорю, вызови конструктор родительского класса "super" и отправь туда драйвер.
+        // что случится?
+        // этот конструктор родительского класса "super" вызовет вот этого дяденьку ("this.driver = driver;" from BasePage)
+        // который возьмет драйвер и создаст и water and web драйвер
         super(driver);
+        // GO TO --------> LoginPage
     }
 //24)
     // конструктор родительского класса "super(driver)" вы3овет вот этого дяденьку "this.driver = driver;
@@ -43,8 +51,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 //9)
     // сделаю getter
-    //    private WebElement getEditPlaylistField(){     // 39) rename
-    private WebElement getCreatePlaylistField() { //11) я должен вытащить "Edit Field" куда мне надо вставить название плейлиста.
+    //    private WebElement getEditPlaylistField(){     // rename
+    private WebElement getCreatePlaylistField() { // я должен вытащить "Edit Field" куда мне надо вставить название плейлиста.
         return driver.findElement(By.xpath("//*[@name='name']"));
     }
 
@@ -71,7 +79,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
         // I will do "return"
         return driver.findElement(plusButtonBy);
     }
-
     public String createPlaylistLesson8(String playlistName) {
         String playlistId = "";
 
@@ -108,7 +115,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
         // GO TO ---------> Playlist
     }
 
-    // 38)
     private By getPlaylistBy(String playlistId) {
         return By.xpath("//*[@href='#!/playlist/" + playlistId + "']");
     }
@@ -123,6 +129,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
             //динамическим зависимости от того какой плейлиста я сюда подам он будет выглядеть по-другому
         } catch (NoSuchElementException xx) {
             return false;
+            // GO TO ------------> PlaylistTests
              }
          }
     }
