@@ -17,8 +17,11 @@
         @Test
         public void loginToApp_incorrectCredentials_failedLogin(){
             LoginPageFactoryLesson9 loginPageLesson9 = new LoginPageFactoryLesson9(driver);
-            loginPageLesson9.open("https://bbb.testpro.io"); //8) I will put "https://bbb.testpro.io" here
+//8)
+            // I will put "https://bbb.testpro.io" here
+            loginPageLesson9.open("https://bbb.testpro.io");
             loginPageLesson9.loginToAppLesson9(username, "wrongPassword");
             Assert.assertTrue(loginPageLesson9.isErrorFrame());
+            // GO TO ------------> LoginPageFactoryLesson9
         }
 }
