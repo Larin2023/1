@@ -1,0 +1,18 @@
+<!--16)
+            теперь чтобы нам можно было запускать по одному файлу-->
+            <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+            <suite name="Master Suit" parallel="classes" thread-count="3">
+                <parameter name="username" value="koeluser06@testpro.io"/>
+                <parameter name="password" value="te$t$tudent"/>
+                <parameter name="browser" value="chrome"/>
+                <test name="Main test">
+                    <classes>
+                        <class name="Lesson11pageObjectsTests.PlaylistTestsLesson11">
+                            <methods>
+                                <include name="playlistTests_renamePlaylist_playlistRename"/>
+                            </methods>
+                        </class>
+                    </classes>
+                </test>
+            </suite>
+            <!-- GO TO UnitTestDataProvider-->

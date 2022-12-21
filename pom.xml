@@ -21,7 +21,6 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
-                                                      <!--                    11)    сюда подаю переменную ${browser}-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
