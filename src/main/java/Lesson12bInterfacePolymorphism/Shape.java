@@ -1,10 +1,10 @@
-package Lesson12bInterfacePolymorphism;
+            package Lesson12bInterfacePolymorphism;
 
-    //15)
-public interface Shape {
+//14)
+            public interface Shape {
 
-    void draw();
-    double getPerimeter();
-    double getArea();
-
-}
+                void draw();
+                double getPerimeter();
+                double getArea();
+            }
+            // GO TO ---------> Circle

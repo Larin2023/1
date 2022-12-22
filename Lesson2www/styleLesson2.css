@@ -1,0 +1,26 @@
+/* 9) */
+                /* GO TO index */
+
+                body {
+                background-color: lightblue;
+                }
+
+                h1{
+                color: white;
+                text-align: center;
+                }
+                /*"точка" это говорит класс, то есть класс cc. in HTML  <div class="cc">*/
+/* 13) */
+                .cc {
+                font-family: arial;
+                font-size: 20px;
+                }
+/* 14)*/
+                .vv {
+                color:yellow;
+                }
+/* 19 */
+                #jie{
+                color:red;
+                }
+                /*решетка это равняется ID*/

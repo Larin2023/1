@@ -3,11 +3,11 @@ package Lesson2BooleanAlgebraConditions;
 public class App {
     public static void main(String[] args) {
 
-        //Boolean algebra
+//Boolean algebra
 
         int age = 10;
 
-        // Condition
+    // Condition
         boolean condition = age >=21;
 
         if(age>=21) {
@@ -65,13 +65,13 @@ public class App {
 
         // Examples:
         boolean a1 = 5>2;
-        System.out.println("a1="+a1);
+        System.out.println("a1 ="+a1);
         boolean a2 = 5>5 || 9>2;
-        System.out.println("a2="+a2);
+        System.out.println("a2 ="+a2);
         boolean a3 = (5==5) && (5==6);
-        System.out.println("a3="+a3);
+        System.out.println("a3 ="+a3);
         boolean a4 = (5==5) && (5!=6);
-        System.out.println("a4="+a4);
+        System.out.println("a4 ="+a4);
 
     }
 }

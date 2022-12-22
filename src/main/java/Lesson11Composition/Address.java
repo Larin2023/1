@@ -1,50 +1,57 @@
-package Lesson11Composition;
+            package Lesson11Composition;
 
-                                                // 2)
-public class Address {
-    private String addressLine1;
-    private String city;
-    private State state;
-    private String zip;
-                                                // 4) I will make a constructor
-    public Address(String addressLine1, String city, State state, String zip) {
-        this.addressLine1 = addressLine1;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-    }
+// 2)
+            public class Address {
+                private String addressLine1;
+                private String city;
+                private State state;
+                private String zip;
+            // GO TO --------> State
 
-                                                // 5) I will make getter and setter
-    public State getState() {
-        return state;
-    }
+// 4)
+        // I will make a constructor
+                public Address(String addressLine1, String city, State state, String zip) {
+                    this.addressLine1 = addressLine1;
+                    this.city = city;
+                    this.state = state;
+                    this.zip = zip;
+                }
 
-    public void setState(State state) {
-        this.state = state;
-    }
+// 5)
+        // I will make getter and setter
+                public State getState() {
+                    return state;
+                }
 
-                                                // 9) more getters ans setters
-    public String getAddressLine1() {
-        return addressLine1;
-    }
+                public void setState(State state) {
+                    this.state = state;
+                }
+    // GO TO --------> Person
 
-    public void setAddressLine1(String addressLine1) {
-        this.addressLine1 = addressLine1;
-    }
+// 9)
+            // more getters ans setters
+                public String getAddressLine1() {
+                    return addressLine1;
+                }
 
-    public String getCity() {
-        return city;
-    }
+                public void setAddressLine1(String addressLine1) {
+                    this.addressLine1 = addressLine1;
+                }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+                public String getCity() {
+                    return city;
+                }
 
-    public String getZip() {
-        return zip;
-    }
+                public void setCity(String city) {
+                    this.city = city;
+                }
 
-    public void setZip(String zip) {
-        this.zip = zip;
-    }
-}
+                public String getZip() {
+                    return zip;
+                }
+
+                public void setZip(String zip) {
+                    this.zip = zip;
+                }
+            }
+            // GO TO --------> App

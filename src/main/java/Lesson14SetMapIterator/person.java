@@ -1,4 +1,5 @@
-package Lesson14SetMapIterator;
-    // 6)
-public class person {
-}
+            package Lesson14SetMapIterator;
+// 6)
+            public class person {
+            }
+            // GO TO ---------> pet

@@ -45,8 +45,6 @@ public class App {
         //"Exception in thread "main" java.lang. ArrayIndexOutOfBoundsException Create breakpoint : Index 10 out of bounds for length 7
         //at AppLesson1.main(AppLesson1.java:11)"
 
-
-
         // Fix the значение 56:
         int[]weekMaxTemperatures ={80,81,86,82,78,56,62};
         weekMaxTemperatures[5]=65;
@@ -63,8 +61,6 @@ public class App {
         System.out.println(names[names.length-1]);
         System.out.println(colors[colors.length-1]);
         System.out.println(weekMaxTemperatures[weekMaxTemperatures.length-1]);
-
-
 
         //а что если я заранее не знаю какие значения I put in array.
         // могу ли я зарезервировать место а потом туда засунуть значение

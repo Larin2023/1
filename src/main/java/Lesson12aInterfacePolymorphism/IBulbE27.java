@@ -1,6 +1,7 @@
-package Lesson12aInterfacePolymorphism;
+            package Lesson12aInterfacePolymorphism;
 
-public interface IBulbE27 {
-    // 8)
-    void keepE27();
-}
+            public interface IBulbE27 {
+// 7)
+                void keepE27();
+            }
+            // GO TO --------> MyDesktop
