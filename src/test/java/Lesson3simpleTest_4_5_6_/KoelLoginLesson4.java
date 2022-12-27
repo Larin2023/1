@@ -12,8 +12,10 @@
 //  1)
             //  позетивный тест
 
+// 5)
+            //   throws InterruptedException {
                 @Test
-                public void loginToKoel_correctCredentials() throws InterruptedException { // 5)
+                public void loginToKoel_correctCredentials() throws InterruptedException {
                     System.setProperty("webdriver.chrome.driver", "chromedriver");
 
 //  2)
@@ -61,7 +63,8 @@
 // 15)
                 // негативный тест
                     @Test
-                    // 16) change to incorrect
+// 16)
+                // change to incorrect
                     public void loginToKoel_incorrectCredentials () throws InterruptedException {
                         System.setProperty("webdriver.chrome.driver", "chromedriver");
                         WebDriver driver = new ChromeDriver();
@@ -81,6 +84,8 @@
 // 19)
                 // две секунды слишком много Thread.sleep(2000);
                         Thread.sleep(500);
+
+                        // THE END
 
 // 18)
                 // и я должен искать элемент css селектору "error"

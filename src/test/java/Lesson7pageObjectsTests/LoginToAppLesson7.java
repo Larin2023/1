@@ -12,6 +12,8 @@
             public class LoginToAppLesson7 {
 // 15)
                 private WebDriver driver; //надо сделать WebDriver глобальным
+                // GO TO -----------> LoginPageLesson7
+
 //18)
                 @BeforeMethod
                 public void starUp() throws InterruptedException {
@@ -44,7 +46,7 @@
                 public void loginToAppLesson7_correctCredentials_successfulLogin(){
                     LoginPageLesson7 loginPageLesson7 = new LoginPageLesson7(driver); // качестве аргумента я передаю туда драйвер
                     loginPageLesson7.open(); //это нам должно открыть страницу
-                   // go to LoginPage
+                   // go to ---------> LoginPage
 
 //22)
                     // я должен послать туда username и password
@@ -59,7 +61,8 @@
                     Assert.assertTrue(mainPageLesson7.isMain()); //то есть mainPage вернет boolean
                 }
 
-                ///////// 26) NEGATIVE TEST/////////////////
+// 26)
+                // NEGATIVE TEST/////////////////
                 @Test
                 public void loginToAppLesson7_incorrectCredentials_failedLogin(){
                     LoginPageLesson7 loginPageLesson7 = new LoginPageLesson7(driver);
@@ -68,3 +71,4 @@
                     Assert.assertTrue(loginPageLesson7.isError()); // он должен рернуть мне true
                 }
             }
+            // GO TO ----------> PlaylistTestsLesson7

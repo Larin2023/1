@@ -11,7 +11,9 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 // 5)
         // Create the class BrowserFactory and public static WebDriver
         // в качестве аргумента я буду брать Enum.
-        // Create Enum --------------> public enum BrowserTypeLesson10
+
+        // GO TO  -------------->  BrowserTypeLesson10
+
         public class BrowserFactory {
 // 7)
         // here we will put here a variable that would be chrome,firefox,etc.
@@ -78,6 +80,9 @@ import org.openqa.selenium.firefox.FirefoxOptions;
         //размер окна надо двух различных аргументах продавать
         options.addArguments("--width=1400");
         options.addArguments("--height=1000");
+
+        // THE END
+
 //15)
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver(options);

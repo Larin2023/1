@@ -7,11 +7,11 @@
                 import org.testng.annotations.AfterMethod;
                 import org.testng.annotations.BeforeMethod;
                 import org.testng.annotations.Test;
-
                 import java.time.Duration;
-                //Synchronizations
+
 
 // 1)
+                //Synchronizations
                 // мы работаем с фронтэнд. некоторые элементы у нас подгружаются не сразу.
                 // некоторые элементы появляются и исчезают не сразу.
                 //допустим когда мы вводим неправильный пароль у нас появляется и исчезает элемент.
@@ -32,11 +32,15 @@
 
                 public class simpleTestLesson6 {
 
-                    private WebDriver driver;
-// 4)
-                // на этом уровне я создам новую переменную
-                    private Wait<WebDriver> wait;
-//12)
+                    private WebDriver driver; // implicit wait
+
+// 5)
+                    // на этом уровне я создам новую переменную
+                    private Wait<WebDriver> wait; // explicit wait
+
+//15)
+                // fluentWait
+                // принципе он работает абсолютно точно также как webdriver вы только у него другой синтаксис
                 // на этом уровне я создам новую переменную
                     private Wait<WebDriver> fluentWait;
 
@@ -47,7 +51,7 @@
                         driver = new ChromeDriver();
                         driver.get("https://bbb.testpro.io/");
 
-// 2)
+// 3)
                 // (this implicit wait method is deprecated!!!!!!) после создания драйвера, мы должны установить implicit wait
                         // driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
                         //я написал если элемента нету, жди его 10 секунд максимум, если 10
@@ -58,7 +62,7 @@
                         //и считается что он увеличивает время тестов.
                         // поэтому implicit wait в реальной жизни не используются.
 
-// 3)
+// 4)
                         //explicit wait:
                         //2 types of explicit wait (Thread.sleep это один из видов explicit wait):
                         // Wait<WebDriver> wait and fluentWait
@@ -71,12 +75,10 @@
                         //умножить на полторы секунды сколько это будет?
                         //полторы тысячи секунд или 20 минут 25
                         //это много то есть 25 минут дополнительно.
+// 6)
                         wait = new WebDriverWait(driver,Duration.ofSeconds(5, 1));
 
-// 11)
-                //        // fluentWait
-                //        принципе он работает абсолютно точно также как webdriver вы только у него другой синтаксис
-// 13)
+// 16)
                         fluentWait = new FluentWait<>(driver)
                                 .pollingEvery(Duration.ofMillis(200)) // это как sleepin
                                 .withTimeout(Duration.ofSeconds(5)) //максимальное время которое готов wait
@@ -96,22 +98,29 @@
 
                     @Test
                     public void loginToKoel_correctCredentials() {
-// 5)
-                        // код должен быть сухим давайте создадим новую переменную:
+// 8)
+                        // код должен быть сухим давайте создадим новую переменную "By":
                         By emailBy = By.xpath("//*[@type='email']");
+// 11)
+                        // вдруг завтра вот этот локатор изменится и что? а то что я его
+                        //изменил и он изменится автоматически здесь 9) и здесь 10)
 
-// 4)
+// 7)
                         // здесь я хочу ждать пока не появится e-mail и когда он только появится тогда я его сохраню.
                         // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@type='email']")));
+                        // я поставил вот этот вейпер. он говорит мы
+                        //здесь ждем когда вот этот элемент "//*[@type='email']" будет видим
+                        // и когда будет видим  тогда откроем дорогу и скажем. проходить дорогие гости.
+                        // ищите email, password, loginButton
 
-// 6)
+// 9)
                         // (explicit wait) и теперь вот этот e-mail я могу вот сюда отправить
                         wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
 
-// 7)
-                        // и могу подправить его соответственно сюда:
+// 10)
+                        // и могу подправить emailBy соответственно сюда:
                         // WebElement email = driver.findElement(By.xpath("//*[@type='email']"));
-                        WebElement email = driver.findElement(By.xpath("//*[@type='email']"));
+                        WebElement email = driver.findElement(emailBy);
 
                         WebElement password = driver.findElement(By.cssSelector("[type='password']"));
                         WebElement loginButton = driver.findElement(By.tagName("button"));
@@ -119,32 +128,31 @@
                         email.sendKeys("alexander.v.anderson@gmail.com");
                         password.sendKeys("te$t$tudent");
                         loginButton.click();
-
-// 8)
+// 12)
                         // now we need to do it here (for not repeating the code)
                         By homeBy = By.cssSelector(".home");
 
-// 10)
+// 14)
                         // (explicit wait) здесь я хочу ждать пока не появится e-mail и когда он только появится тогда я его сохраню.
                         wait.until(ExpectedConditions.visibilityOfElementLocated(homeBy));
 
-// 9)
+// 13)
                         // we take "By.cssSelector(".home")" from here
                         //WebElement home = driver.findElement(By.cssSelector(".error"));
+                        // сюда вставляем homeBy
                         WebElement home = driver.findElement(homeBy);
                         Assert.assertTrue(home.isDisplayed());
                     }
 
-// 14)
-                    // а здесь и мы будем использовать fluentWait
                     // негативный тест
 
                     @Test
                     public void loginToKoel_incorrectCredentials() {
 
-// 15)
+                        // а здесь и мы будем использовать fluentWait
+// 17)
                         By emailBy = By.xpath("//*[@type='email']");
-// 16)
+// 18)
                         fluentWait.until(x->x.findElement(emailBy).isDisplayed());
                         // мы ждем пока элемент будет Displayed.
                         //если вы поищите эту форму в интернете, для java очень трудно найти. эта форма я вытащил из c#.
@@ -159,7 +167,7 @@
                         password.sendKeys("wrongPassword");
                         loginButton.click();
 
-// 17)
+// 19)
                     // повторю вот для этого места
                         By errorBy = By.cssSelector(".error");
                         fluentWait.until(x->x.findElement(errorBy).isDisplayed());
@@ -171,8 +179,9 @@
                         By emailBy = By.xpath("//*[@type='email']");
                         wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
 
-// 18)
-                    // we will put here "emailBy"
+// 20)
+                        // working more with Wait<WebDriver> wait
+                        // we will put here "emailBy"
                         // WebElement email = driver.findElement(By.xpath("//*[@type='email']"));
                         WebElement email = driver.findElement(emailBy);
 
@@ -183,11 +192,12 @@
                         password.sendKeys("te$t$tudent");
                         loginButton.click();
 
-// 20)
+// 22)
+                        // отдельный класс:
                         By plusButtonBy = By.xpath("//*[@class='fa fa-plus-circle create']");
                         wait.until(ExpectedConditions.elementToBeClickable(plusButtonBy));
 
-// 19)
+// 21)
                     // я вот этот ""//*[@class='fa fa-plus-circle create']"" вытащил отдельный класс:
                         // WebElement plusButton = driver.findElement(By.xpath("//*[@class='fa fa-plus-circle create']"));
                         WebElement plusButton = driver.findElement(plusButtonBy);
@@ -199,7 +209,7 @@
                         textField.sendKeys("XXXX");
                         textField.sendKeys(Keys.RETURN);
 
-// 20)
+// 23)
                     // я вот этот "//div[@class='success show']"вытащил отдельный класс:
                         //WebElement green = driver.findElement(By.xpath("//div[@class='success show']"));
                         By successBy = By.xpath("//div[@class='success show']");
@@ -215,3 +225,5 @@
                 //умножить на полторы секунды сколько это будет?
                 //полторы тысячи секунд или 20 минут 25
                 //это много то есть 25 минут дополнительно.
+
+                // THE END

@@ -12,8 +12,10 @@
         public class SimpleTestLesson3 {
 // 1)
             //нужно закачать в наш проект chrome драйвер
+// 6)
+            // "Thread.sleep(5000);" может вызвать exception, поэтому я добавлю "throws InterruptedException {" here.
             @Test
-            public void udemySearch() throws InterruptedException { //6) "Thread.sleep(5000);" может вызвать exception, поэтому я добавлю "throws InterruptedException {" here.
+            public void udemySearch() throws InterruptedException {
 
 // 2)
                 //поставте system property
@@ -66,6 +68,8 @@
                 //sleep может вызвать exception поэтому я добавлю exception
 
                 driver.quit(); // closed the page
+
+                // THE END
             }
         }
 

@@ -41,6 +41,8 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
             // а с AjaxElementLocatorFactory,
             //вы находите элемент только в тот момент когда вы его кликаете.
 
+            // THE END
+
 //10)
         // в конструкторе я делаю две вещи:
         // инициализирую элементы. то есть что когда PageFactory.initElements

@@ -50,7 +50,9 @@ import Lesson8pageObjects.MainPageLesson8;
 //37)
         // я убераю вот эту ерунду ("alexander.v.anderson@gmail.com","te$t$tudent") and replace it with (username, password);
         MainPageLesson8 mainPageLesson8 = loginPageLesson8.loginToAppLesson8(username, password);
-        // 33) представьте завтра мне захочется другую email использовать. я язасунуть it in base test.
+        // представьте завтра мне захочется другую email использовать. я язасунуть it in base test.
+
+                // THE END
 
 //3)
         // теперь я в эту функцию подаю плейлист который я сгенерировал playlistName

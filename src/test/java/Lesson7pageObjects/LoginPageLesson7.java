@@ -75,7 +75,6 @@
                 // we changed it to private
                 private WebElement getPasswordField() { // когда я вызвал этот getter он должен мне поле password возвращать.
                     return driver.findElement(By.xpath("[type='password']"));
-
                 }
 // 4)
                 //  public WebElement getLoginButton(){  // we changed it to private
@@ -85,6 +84,7 @@
                 private WebElement getLoginButton() {
                     return driver.findElement(By.tagName("button"));
                 }
+                // GO TO -------------> LoginToApp
 
  // 7)
                 // мне надо создать теперь метод который будет осуществлять логин. для логина мне надо подать username и password
@@ -122,12 +122,14 @@
                     return new MainPageLesson7(driver);  // она вернет объект класса mind page
                     // далее, создадим main page
                 }
+                // GO TO ---------> MainPageLesson7
 
 // 16)
                 // мне надо еще один метод создать
                 public void open() {
                     driver.get("https://bbb.testpro.io"); // открыть сайт
                 }
+                // GO TO --------------> LoginToAppLesson7
 
 // 25)
                 // NEGATIVE TEST///////////////
@@ -141,3 +143,4 @@
                     }
                 }
             }
+            // GO TO -------> LoginToAppLesson7

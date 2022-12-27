@@ -8,7 +8,8 @@
             import pageObjects.LoginPage;
             import pageObjects.MainPage;
 
-// 28)
+// 27)
+            // homework////////////////////
             public class PlaylistTestsLesson7 {
                 private WebDriver driver; //надо сделать WebDriver глобальным
                 @BeforeMethod
@@ -22,7 +23,7 @@
                     driver.quit();
                 }
                 @Test
-//29)
+//28)
                 public void playlistTests_createPlaylist_playlistCreated(){
                     LoginPage loginPage = new LoginPage(driver);
                     loginPage.open();
@@ -30,3 +31,4 @@
                     mainPage.createPlaylist("XXXX");
                 }
             }
+            // GO TO ------------> MainPageLesson7

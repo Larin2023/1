@@ -41,6 +41,9 @@
                 // что нам дает AfterMethod?
                 //даже если тест упал, AfterMethod все
                 //равно будет запущен то есть мы все равно закроем наш драйвер.
+
+                // THE END
+
                 @AfterMethod
                 public void tearDown() throws InterruptedException {
                     System.out.println("In the after method - > Driver will be killed soon"); // мы можем написать это чтобы проверить закроиться ли драйвер.

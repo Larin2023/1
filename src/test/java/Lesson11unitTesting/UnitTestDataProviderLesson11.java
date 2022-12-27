@@ -28,3 +28,4 @@
                     Assert.assertEquals(result,price);
                 }
             }
+            // THE END

@@ -91,7 +91,9 @@
 //10)
         // getEditPlaylistField().sendKeys(playlistName);
         // getEditPlaylistField().sendKeys(Keys.RETURN);
-        // GO TO -------> PlaylistTestsLesson8
+
+                    // GO TO -------> PlaylistTestsLesson8
+
 
         getCreatePlaylistField().sendKeys(playlistName);
         getCreatePlaylistField().sendKeys(Keys.RETURN); // меня туда надо клавиш ENTER отправит
@@ -112,6 +114,7 @@
         //String url = driver.getCurrentUrl();
         //playlistId = url.split("/")[5];
         return driver.getCurrentUrl().split("/")[5];
+
         // GO TO ---------> Playlist
     }
 

@@ -8,3 +8,5 @@
                 System.out.println(passenger.getPrice());
             }
         }
+        //теперь нам надо написать unit-тест
+        // GO TO --------> UnitTest

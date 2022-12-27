@@ -34,6 +34,7 @@
         //        WebDriverManager » 5.3.0
         //        Automated driver management and other helper features for Selenium WebDriver in Java
         //https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager/5.3.0
+
 // 2)
         //        // System.setProperty("webdriver.chrome.driver", "chromedriver.exe"); So we can delete Chrome driver
 // 3)

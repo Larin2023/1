@@ -28,6 +28,7 @@
             // если он подсветился, значит я на моей странице - я возвращаю true.
             // но если я не дождался у меня будет что? тайм-аут exception.
             // если у меня тайм-аут exception я делаю ритер files.
+                // GO TO ----------------> LoginToAppLesson7
 // 24)
                 public boolean isMain() {
 
@@ -43,9 +44,10 @@
                         return false; //появится false
                     }
                 }
-// 27)
-                // homework////////////////////
-// 30)
+                // GO TO -----------> LoginPageLesson7
+
+
+// 29)
                 // add String
                 public String createPlaylist(String playlistName){
                     String playlistId = null;
@@ -53,3 +55,4 @@
                     return playlistId;
                 }
             }
+            // THE END

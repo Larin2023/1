@@ -50,7 +50,7 @@
                     // just "arrays" так не могут
                     System.out.println("добавить в требуемое место");
 
-// 6a)
+// 7)
                     // we can add array to array
                     ArrayList<String>subcolors = new ArrayList<>();
                     subcolors.add("Cyan");
@@ -59,7 +59,7 @@
                     System.out.println(colors.size());
                     System.out.println("add array to array");
 
-// 7)
+// 8)
                     // операция "добавить" - "add",
                     //  операция "set" это мы изменяем существующей, get мы получаем.
                     //  интересно что делает "set" дело в том что если вот у меня 0 Red,
@@ -74,7 +74,7 @@
                     System.out.println(colors); // "Brown" become 0
                     System.out.println("7______________________________________");
 
-// 8)
+// 9)
                     // хочу удалить index 1 (Green)
                     oldValue = colors.remove(1);
                     System.out.println(oldValue);
@@ -84,7 +84,7 @@
                     System.out.println(colors);
                     System.out.println("8________удалить index 1 (Green)____________");
 
-// 9)
+// 10)
                     // самая главная вещь это Итерация.
                     //Итерация точно такая же как with array:
                     // тип итерации это по for each:

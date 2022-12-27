@@ -30,7 +30,8 @@
         // я их инициализрую:
         username = "alexander.v.anderson@gmail.com";
         password = "te$t$tudent";
-        // GO TO --------> LoginToApp
+
+                // GO TO --------> LoginToApp
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
