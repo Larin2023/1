@@ -32,6 +32,8 @@
             //          и у нас должен здесь появится новая папка скриншот если ее открою у меня есть скриншот.
             //        у нас генерируется автоматически report
 
+            // THE END
+
             //        String playlistId = mainPage.createPlaylist(playlistName);
             //
             //        String newPlaylistName = faker.artist().name();
